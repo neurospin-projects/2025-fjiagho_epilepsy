@@ -7,9 +7,9 @@ import json
 os.getcwd()
 
 # %%
-path = "/neurospin/dico/fred/Runs/01_betaVAE/Program/2023_jlaval_STSbabies/betaVAE/yaml_all_regions/UKB"
+path = "/neurospin/dico/fred/Runs/01_betaVAE/Program/2023_jlaval_STSbabies/betaVAE/yaml_all_regions/epilepsy_PBS"
 ref_file = "/neurospin/dico/fred/Runs/01_betaVAE/Program/2023_jlaval_STSbabies/betaVAE/yaml_all_regions/ref.yaml"
-crop_path = "/neurospin/dico/data/deep_folding/current/datasets/UkBioBank40/crops/2mm"
+crop_path = "/neurospin/dico/data/deep_folding/current/datasets/epilepsy_PBS/crops/2mm"
 crop_dirs = glob.glob(f"{crop_path}/*")
 crop_drops = []
 

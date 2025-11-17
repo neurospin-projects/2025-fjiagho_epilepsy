@@ -41,7 +41,6 @@ from torch.autograd import Variable
 import torch.nn as nn
 import os
 
-
 class VAE(nn.Module):
     """ beta-VAE class
     """

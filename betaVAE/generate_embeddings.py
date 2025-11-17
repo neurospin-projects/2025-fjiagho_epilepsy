@@ -40,6 +40,7 @@ import pandas as pd
 import numpy as np
 import torch
 import torch.nn as nn
+from pathlib import Path
 
 from beta_vae import VAE, ModelTester
 from load_data import create_subset
@@ -122,7 +123,7 @@ def main(config):
     #Here we select the model
     #config.test_model_dir = "/neurospin/dico/cmendoza/Runs/01_betavae_sulci_crops/Output/2025-05-28/23-11-30"
     #config.test_model_dir = "/neurospin/dico/cmendoza/Runs/01_betavae_sulci_crops/Output/2025-06-05/17-32-49"
-    config.test_model_dir = "/neurospin/dico/fred/Runs/01_betaVAE/Output/2025-10-30/11-29-00/epilepsy_PBS"
+    #config.test_model_dir = "/neurospin/dico/data/deep_folding/models/2025-11-10/FCLp-subsc-FCLa-INSULA_left_UKB_15-59-28_107"
 
     model_dir = os.path.join(config.test_model_dir, 'checkpoint.pt') 
     #model_dir = os.path.join(config.test_model_dir, 'vae.pt')
@@ -146,8 +147,8 @@ def main(config):
                          kl_weight=config.kl, loss_func=criterion,
                          n_latent=config.n, depth=config.depth, save_dir=config.test_model_dir)
     print('Tester',tester)
-    results, output, input = tester.test()
-    
+    results, output, input = tester.test()    
+
     np.save(os.path.join(config.test_model_dir, 'outputs.npy'), output)
     np.save(os.path.join(config.test_model_dir, 'inputs.npy'), input)
 
