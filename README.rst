@@ -1,8 +1,8 @@
 
-Self-supervised learning for preterm-specific variability of cortical folding in the right superior temporal sulcus region
+Beta-VAE anomaly detection for epilepsy using cortical folding representations
 ###########################################################################
 
-This repository is based on https://github.com/neurospin-projects/2023_agaudin_jchavas_folding_supervised. It aims to apply the self-supervised deep learning pipepline to preterm-specific folding pattern analysis and explore explainability methods.
+This repository is based on https://github.com/neurospin-projects/2023_jlaval_STSbabies. It aims to apply the self-supervised deep learning pipepline to preterm-specific folding pattern analysis and explore explainability methods.
 Official Pytorch implementation for Unsupervised Learning and Cortical Folding (`paper <https://openreview.net/forum?id=ueRZzvQ_K6u>`_).
 
 
@@ -38,7 +38,7 @@ Alternatively, you can use the requirements file:
 
     python3 -m venv venv
     . venv/bin/activate
-    pip3 install -r requirements_env.txt
+    pip3 install -r requirements_venv.txt
 
 Note that you might need a `BrainVISA <https://brainvisa.info>`_ environment to run
 some of the functions or notebooks.
