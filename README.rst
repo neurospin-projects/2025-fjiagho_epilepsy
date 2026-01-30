@@ -50,7 +50,7 @@ some of the functions or notebooks.
 Train the beta-VAE
 ---------------------------
 
-To train the beta-VAE, change the configs file, the run
+To train the beta-VAE, change the configs file, then run
 
 .. code-block:: shell
     cd betaVAE
